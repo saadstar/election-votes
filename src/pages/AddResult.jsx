@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Input, Button, Select} from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
-import { candidateStatusOptions, setterOptions, daysOptions } from '../data/dummy';
+import { statesOptions,candidateStatusOptions, setterOptions, daysOptions } from '../data/dummy';
 
 const AddResult = () => {
   const { currentColor } = useStateContext();
@@ -22,7 +22,7 @@ const AddResult = () => {
                   <Select
         label="المحافظه"
         name="state"
-        options={candidateStatusOptions}
+        options={statesOptions}
         register={register("status", { required: "Please select a color" })}
         error={errors.status}
                       />

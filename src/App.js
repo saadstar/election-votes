@@ -13,6 +13,10 @@ import {
   AddCandidate,
   Results,
   AddResult,
+  AddCenter,
+  AddPlace,
+  AddCity,
+  AddSchool,
 } from "./pages";
 import './App.css';
 
@@ -84,6 +88,10 @@ const App = () => {
                 <Route path="/add-candidate" element={<AddCandidate />} />
                 <Route path="/results" element={<Results />} />
                 <Route path="/add-result" element={<AddResult />} />
+                <Route path="/add-center" element={<AddCenter />} />
+                <Route path="/add-place" element={<AddPlace />} />
+                <Route path="/add-city" element={<AddCity />} />
+                <Route path="/add-school" element={<AddSchool />} />
               </Routes>
             </div>
             <Footer />

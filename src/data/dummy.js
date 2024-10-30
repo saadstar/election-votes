@@ -491,6 +491,26 @@ export const links = [
         icon: <AiOutlineCalendar />,
         to:"/add-result"
       },
+      {
+        name: 'أضف دائره',
+        icon: <AiOutlineCalendar />,
+        to:"/add-center"
+      },
+      {
+        name: 'أضف قسم',
+        icon: <AiOutlineCalendar />,
+        to:"/add-place"
+      },
+      {
+        name: 'أضف مدينه',
+        icon: <AiOutlineCalendar />,
+        to:"/add-city"
+      },
+      {
+        name: 'أضف مدرسه',
+        icon: <AiOutlineCalendar />,
+        to:"/add-school"
+      },
     ],
   },
   {
@@ -7493,4 +7513,33 @@ export const daysOptions = [
     value: "day3",
     label: "اليوم الثالث",
   },  
+];
+export const statesOptions = [
+  { value: "cairo", label: "القاهرة" },
+  { value: "alexandria", label: "الإسكندرية" },
+  { value: "giza", label: "الجيزة" },
+  { value: "sharqia", label: "الشرقية" },
+  { value: "port_said", label: "بورسعيد" },
+  { value: "suez", label: "السويس" },
+  { value: "dakahlia", label: "الدقهلية" },
+  { value: "aswan", label: "أسوان" },
+  { value: "assuit", label: "أسيوط" },
+  { value: "beheira", label: "البحيرة" },
+  { value: "beni_suef", label: "بني سويف" },
+  { value: "faiyum", label: "الفيوم" },
+  { value: "gharbia", label: "الغربية" },
+  { value: "ismailia", label: "الإسماعيلية" },
+  { value: "kafr_el_sheikh", label: "كفر الشيخ" },
+  { value: "matruh", label: "مطروح" },
+  { value: "minya", label: "المنيا" },
+  { value: "monufia", label: "المنوفية" },
+  { value: "new_valley", label: "الوادي الجديد" },
+  { value: "qalyubia", label: "القليوبية" },
+  { value: "qena", label: "قنا" },
+  { value: "red_sea", label: "البحر الأحمر" },
+  { value: "sohag", label: "سوهاج" },
+  { value: "sinai_north", label: "شمال سيناء" },
+  { value: "sinai_south", label: "جنوب سيناء" },
+  { value: "luxor", label: "الأقصر" },
+  { value: "damietta", label: "دمياط" },
 ];
