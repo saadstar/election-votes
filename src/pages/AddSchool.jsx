@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Input, Button, Select} from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
-import {  setterOptions ,statesOptions} from '../data/dummy';
+import { statesOptions,centerOptions,districtOptions} from '../data/dummy';
 
 const AddSchool = () => {
   const { currentColor } = useStateContext();
@@ -29,7 +29,7 @@ const AddSchool = () => {
                   <Select
         label="الدائره"
         name="type"
-        options={setterOptions}
+        options={centerOptions}
         register={register("type", { required: "Please select a color" })}
         error={errors.type}
                       />
@@ -38,21 +38,11 @@ const AddSchool = () => {
                   <Select
         label="القسم"
         name="type"
-        options={setterOptions}
+        options={districtOptions}
         register={register("type", { required: "Please select a color" })}
         error={errors.type}
                       />                     
-                  <Select
-        label="المدينه"
-        name="type"
-        options={setterOptions}
-        register={register("type", { required: "Please select a color" })}
-        error={errors.type}
-                      />                     
-                 
-                  </div>                                
-                  <div className="flex gap-3">                                                       
-                   <Input
+                    <Input
                 placeholder='اسم المدرسه'
                 type='text'
                 name='allvotes'
@@ -62,19 +52,9 @@ const AddSchool = () => {
                   required: "السنه مطلوب!",
                 })}
                 error={errors.allvotes ? errors.allvotes.message : ""}
-              />
-                   <Input
-                placeholder='رقم اللجنه'
-                type='text'
-                name='allvotes'
-                label='اللجنه'
-                className='w-full rounded-full'
-                register={register("allvotes", {
-                  required: "السنه مطلوب!",
-                })}
-                error={errors.allvotes ? errors.allvotes.message : ""}
-              />
-                  </div>                                
+              />               
+                 
+                </div>
                   <div className="flex gap-3 mt-3">
                       <Button
                 color="white"
@@ -83,7 +63,7 @@ const AddSchool = () => {
                 borderRadius="10px"
                           any='w-full'
               />
-                      <Link to='/places' className='w-full'>
+                      <Link to='/elc-center' className='w-full'>
                           <Button
                 color="white"
                 bgColor={"red"}

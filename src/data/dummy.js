@@ -4,6 +4,7 @@ import { FiShoppingBag, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 
 import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { IoMdContacts } from 'react-icons/io';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { CgAddR } from "react-icons/cg";
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
 import { GrLocation } from 'react-icons/gr';
@@ -51,48 +52,7 @@ const gridEmployeeCountry = (props) => (
     <span>{props.Country}</span>
   </div>
 );
-export const EditorData = () => (
-  <div>
-    <h3>
-      Try React
-      React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
 
-      Online Playgrounds
-      If you’re interested in playing around with React, you can use an online code playground. Try a Hello World template on CodePen, CodeSandbox, or Stackblitz.
-
-      If you prefer to use your own text editor, you can also download this HTML file, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we’d only recommend using this for simple demos.
-
-      Add React to a Website
-      You can add React to an HTML page in one minute. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
-
-      Create a New React App
-      When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!
-
-      As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. Learn how.
-
-      Learn React
-      People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
-
-      If you prefer to learn by doing, start with our practical tutorial.
-      If you prefer to learn concepts step by step, start with our guide to main concepts.
-      Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.
-
-      First Examples
-      The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
-
-      React for Beginners
-      If you feel that the React documentation goes at a faster pace than you’re comfortable with, check out this overview of React by Tania Rascia. It introduces the most important React concepts in a detailed, beginner-friendly way. Once you’re done, give the documentation another try!
-
-      React for Designers
-      If you’re coming from a design background, these resources are a great place to get started.
-
-      JavaScript Resources
-      The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.
-
-      We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
-    </h3>
-  </div>
-);
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
@@ -406,7 +366,7 @@ export const customersGrid = [
 
 ];
 
-export const employeesGrid = [
+export const electionPlace = [
   {
     field: 'Employee',
     headerText:"المحافظه",
@@ -439,7 +399,7 @@ export const employeesGrid = [
     textAlign: 'Center'
   },
   {
-    field: 'ReportsTo',
+    field: 'number',
     headerText: 'اللجنه',
     width: '120',
     textAlign: 'Center'
@@ -448,90 +408,64 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'الرئيسيه',
+    title: "الرئيسيه",
     links: [
       {
-        name: 'الرئيسيه',
+        name: "الرئيسيه",
         icon: <FiShoppingBag />,
-        to:'/'
+        to: "/",
       },
     ],
   },
 
   {
-    title: 'الجداول',
+    title: "الجداول",
     links: [
       {
-        name: 'المرشحين',
+        name: "المرشحين",
         icon: <AiOutlineShoppingCart />,
-        to:'/candidates'
+        to: "/candidates",
       },
       {
-        name: 'مراكز الأنتخاب',
+        name: "المقرات الأنتخابيه",
         icon: <IoMdContacts />,
-        to:"elc-center"
+        to: "elc-center",
       },
     ],
   },
   {
-    title: 'الأضافات',
+    title: "البيانات",
     links: [
       {
-        name: 'اضف مرشح',
-        icon: <AiOutlineCalendar />,
-        to:"/add-candidate"
-      },
-      {
-        name: 'النتائج',
-        icon: <AiOutlineCalendar />,
-        to:"/results"
-      },
-      {
-        name: 'أضف نتيجه',
-        icon: <AiOutlineCalendar />,
-        to:"/add-result"
-      },
-      {
-        name: 'أضف دائره',
-        icon: <AiOutlineCalendar />,
-        to:"/add-center"
-      },
-      {
-        name: 'أضف قسم',
-        icon: <AiOutlineCalendar />,
-        to:"/add-place"
-      },
-      {
-        name: 'أضف مدينه',
-        icon: <AiOutlineCalendar />,
-        to:"/add-city"
-      },
-      {
-        name: 'أضف مدرسه',
-        icon: <AiOutlineCalendar />,
-        to:"/add-school"
-      },
-    ],
-  },
-  {
-    title: 'البيانات',
-    links: [
-      {
-        name: 'المحافظات',
-        icon: <AiOutlineStock />,
-        to:"/state"
-      },
-      {
-        name: 'الدوائر',
+        name: "الدوائر",
         icon: <AiOutlineAreaChart />,
-        to:"/area"
+        to: "/center",
       },
-
       {
-        name: 'الاقسام',
+        name: "الاقسام",
         icon: <AiOutlineBarChart />,
-        to:"center"
-      },      
+        to: "place",
+      },
+    ],
+  },
+  {
+    title: "الأضافات",
+    links: [
+      {
+        name: "أضف مدرسه",
+        icon: <CgAddR />,
+        to: "/add-school",
+      },
+      {
+        name: "النتائج",
+        icon: <AiOutlineCalendar />,
+        to: "/results",
+      },
+      {
+        name: "أضف نتيجه",
+        icon: <CgAddR />,
+        to: "/add-result",
+      },
     ],
   },
 ];
@@ -885,21 +819,6 @@ export const candidatesColumn = [
     textAlign: "Center",
   },
 ];
-export const statesColumns = [
-  {
-    field: "name",
-    headerText: "اسم المحافظه",
-    textAlign: "Center",
-    width: "120",
-  },
-  {
-    field: "code",
-    headerText: "كود المحافظة	",
-    textAlign: "Center",
-    width: "120",
-  },
-];
-
 export const areaColumns = [
   {
     field: "stateName",
@@ -3646,68 +3565,6 @@ export const candidatesRow = [
   },
 ];
 
-export const statesRow = [
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-  {
-    id: 10248,
-    name: 'Vinet',
-    code: 32.38,
-  },
-];
 export const areaRow = [
   {
     id: 10248,
@@ -7451,54 +7308,71 @@ export const setterOptions = [
   },
 ];
 export const centerOptions = [
-  {
-    value: "giza",
-    label: "التجمع",
-  },
-  {
-    value: "cairo",
-    label: "المرج",
-  },
-  {
-    value: "egypt",
-    label: "اسيوط",
-  },
-  {
-    value: "giza",
-    label: "بنها",
-  },
-  {
-    value: "cairo",
-    label: "قليوب",
-  },
-  {
-    value: "egypt",
-    label: "مدينه مصر",
-  },
-  {
-    value: "giza",
-    label: "المطاريه",
-  },
-  {
-    value: "cairo",
-    label: "المرج",
-  },
-  {
-    value: "egypt",
-    label: "اسيوط",
-  },
-  {
-    value: "giza",
-    label: "التجمع",
-  },
-  {
-    value: "cairo",
-    label: "المرج",
-  },
-  {
-    value: "egypt",
-    label: "اسيوط",
-  },
+  { value: "Nasr-City", label: "مدينة نصر" },
+  { value: "Heliopolis", label: "مصر الجديدة" },
+  { value: "Maadi", label: "المعادي" },
+  { value: "6th-October", label: "6 أكتوبر" },
+  { value: "Dokki", label: "الدقي" },
+  { value: "Mohandessin", label: "المهندسين" },
+  { value: "Zamalek", label: "الزمالك" },
+  { value: "Giza", label: "الجيزة" },
+  { value: "Alexandria", label: "الإسكندرية" },
+  { value: "Mansoura", label: "المنصورة" },
+  { value: "Port-Said", label: "بورسعيد" },
+  { value: "Ismailia", label: "الإسماعيلية" },
+  { value: "Suez", label: "السويس" },
+  { value: "Aswan", label: "أسوان" },
+  { value: "Luxor", label: "الأقصر" },
+  { value: "Hurghada", label: "الغردقة" },
+  { value: "Sharm-El-Sheikh", label: "شرم الشيخ" },
+  { value: "Fayoum", label: "الفيوم" },
+  { value: "Beni-Suef", label: "بني سويف" },
+  { value: "Sohag", label: "سوهاج" },
+  { value: "Qena", label: "قنا" },
+  { value: "Asyut", label: "أسيوط" },
+  { value: "Minya", label: "المنيا" },
+  { value: "Tanta", label: "طنطا" },
+  { value: "Zagazig", label: "الزقازيق" },
+  { value: "Damietta", label: "دمياط" },
+];
+export const districtOptions = [
+  { value: "Nasr-City", label: "قسم مدينة نصر" },
+  { value: "Heliopolis", label: "قسم مصر الجديدة" },
+  { value: "Shubra", label: "قسم شبرا" },
+  { value: "Maadi", label: "قسم المعادي" },
+  { value: "Zamalek", label: "قسم الزمالك" },
+  { value: "Dokki", label: "قسم الدقي" },
+  { value: "Mohandessin", label: "قسم المهندسين" },
+  { value: "Garden-City", label: "قسم جاردن سيتي" },
+  { value: "Hadayek-El-Kobba", label: "قسم حدائق القبة" },
+  { value: "El-Marg", label: "قسم المرج" },
+  { value: "Ain-Shams", label: "قسم عين شمس" },
+  { value: "El-Mataria", label: "قسم المطرية" },
+  { value: "El-Agouza", label: "قسم العجوزة" },
+  { value: "Imbaba", label: "قسم إمبابة" },
+  { value: "Helwan", label: "قسم حلوان" },
+  { value: "El-Sahel", label: "قسم الساحل" },
+  { value: "Bulaq", label: "قسم بولاق" },
+  { value: "Old-Cairo", label: "قسم مصر القديمة" },
+  { value: "El-Manial", label: "قسم المنيل" },
+  { value: "El-Rehab", label: "قسم الرحاب" },
+  { value: "New-Cairo", label: "قسم القاهرة الجديدة" },
+  { value: "5th-Settlement", label: "قسم التجمع الخامس" },
+  { value: "Sheraton", label: "قسم شيراتون" },
+  { value: "6th-October", label: "قسم 6 أكتوبر" },
+  { value: "Sheikh-Zayed", label: "قسم الشيخ زايد" },
+  { value: "Giza", label: "قسم الجيزة" },
+  { value: "Haram", label: "قسم الهرم" },
+  { value: "Faisal", label: "قسم فيصل" },
+  { value: "Obour", label: "قسم العبور" },
+  { value: "El-Shorouk", label: "قسم الشروق" },
+  { value: "Badr", label: "قسم بدر" },
+  { value: "10th-of-Ramadan", label: "قسم العاشر من رمضان" },
+  { value: "El-Katameya", label: "قسم القطامية" },
+  { value: "El-Tebbin", label: "قسم التبين" },
+  { value: "Basatin", label: "قسم البساتين" },
+  { value: "El-Maadi", label: "قسم المعادي" },
+  { value: "El-Waily", label: "قسم الوايلي" },
 ];
 export const daysOptions = [
   {
@@ -7513,6 +7387,16 @@ export const daysOptions = [
     value: "day3",
     label: "اليوم الثالث",
   },  
+];
+export const genderOptions = [
+  {
+    value: "male",
+    label: "ذكر",
+  },
+  {
+    value: "female",
+    label: "انثي",
+  }, 
 ];
 export const statesOptions = [
   { value: "cairo", label: "القاهرة" },
@@ -7542,4 +7426,34 @@ export const statesOptions = [
   { value: "sinai_south", label: "جنوب سيناء" },
   { value: "luxor", label: "الأقصر" },
   { value: "damietta", label: "دمياط" },
+];
+export const schools = [
+  {
+    value: "Cairo American College",
+    label: "مدرسة القاهرة الأمريكية",
+  },
+  {
+    value: "Misr American College",
+    label: "كلية مصر الأمريكية",
+  },
+  {
+    value: "El Alsson British & American International School",
+    label: "مدرسة الألسون البريطانية والأمريكية الدولية",
+  },
+  {
+    value: "British International School in Cairo",
+    label: "المدرسة البريطانية الدولية في القاهرة",
+  },
+  {
+    value: "Modern English School Cairo",
+    label: "مدرسة القاهرة الإنجليزية الحديثة",
+  },
+  {
+    value: "Deutsche Schule der Borromäerinnen Kairo",
+    label: "المدرسة الألمانية للبوروميين في القاهرة",
+  },
+  {
+    value: "International School of Choueifat - Cairo",
+    label: "مدرسة الشويفات الدولية - القاهرة",
+  },
 ];

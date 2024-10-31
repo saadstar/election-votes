@@ -25,8 +25,15 @@ const AddPlace = () => {
         options={statesOptions}
         register={register("type", { required: "Please select a color" })}
         error={errors.type}
-                      />                     
-                   <Input
+                      />                                                                            
+                 <Select
+        label="الدائره التابعه للقسم"
+        name="type"
+        options={setterOptions}
+        register={register("type", { required: "Please select a color" })}
+        error={errors.type}
+            />
+             <Input
                 placeholder='القسم'
                 type='text'
                 name='allvotes'
@@ -36,14 +43,7 @@ const AddPlace = () => {
                   required: "السنه مطلوب!",
                 })}
                 error={errors.allvotes ? errors.allvotes.message : ""}
-              />                                        
-                 <Select
-        label="الدائره التابعه للقسم"
-        name="type"
-        options={setterOptions}
-        register={register("type", { required: "Please select a color" })}
-        error={errors.type}
-                      />
+              />   
                   </div>                                
                   <div className="flex gap-3 mt-3">
                       <Button
@@ -53,7 +53,7 @@ const AddPlace = () => {
                 borderRadius="10px"
                           any='w-full'
               />
-                      <Link to='/places' className='w-full'>
+                      <Link to='/place' className='w-full'>
                           <Button
                 color="white"
                 bgColor={"red"}

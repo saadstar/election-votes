@@ -34,21 +34,10 @@ const AddCenter = () => {
                 label='اسم الدائره'
                 className='w-full rounded-full'
                 register={register("allvotes", {
-                  required: "السنه مطلوب!",
+                  required: "الدائره مطلوبه!",
                 })}
                 error={errors.allvotes ? errors.allvotes.message : ""}
-              />                                        
-                   <Input
-                placeholder='الكود'
-                type='text'
-                name='allvotes'
-                label='كود الدائره'
-                className='w-full rounded-full'
-                register={register("allvotes", {
-                  required: "السنه مطلوب!",
-                })}
-                error={errors.allvotes ? errors.allvotes.message : ""}
-              />                                        
+              />                                                                                           
                   </div>                                
                   <div className="flex gap-3 mt-3">
                       <Button
@@ -58,7 +47,7 @@ const AddCenter = () => {
                 borderRadius="10px"
                           any='w-full'
               />
-                      <Link to='/results' className='w-full'>
+                      <Link to='/center' className='w-full'>
                           <Button
                 color="white"
                 bgColor={"red"}

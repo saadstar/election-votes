@@ -17,6 +17,7 @@ import {
   AddPlace,
   AddCity,
   AddSchool,
+  AddNumber,
 } from "./pages";
 import './App.css';
 
@@ -80,9 +81,8 @@ const App = () => {
                 <Route path="/elc-center" element={<ElectionCenters />} />
 
                 {/* election data  */}
-                <Route path="/state" element={<States />} />
-                <Route path="/area" element={<AreaP />} />
-                <Route path="/center" element={<Center />} />
+                <Route path="/center" element={<AreaP />} />
+                <Route path="/place" element={<Center />} />
 
                 {/* Adds */}
                 <Route path="/add-candidate" element={<AddCandidate />} />
@@ -91,6 +91,7 @@ const App = () => {
                 <Route path="/add-center" element={<AddCenter />} />
                 <Route path="/add-place" element={<AddPlace />} />
                 <Route path="/add-city" element={<AddCity />} />
+                <Route path="/add-number" element={<AddNumber />} />
                 <Route path="/add-school" element={<AddSchool />} />
               </Routes>
             </div>

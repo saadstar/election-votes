@@ -46,7 +46,7 @@ const AddCity = () => {
                 placeholder='اسم المدينه'
                 type='text'
                 name='allvotes'
-                label='المدينه او القريه'
+                label='الشياخه او القريه'
                 className='w-full rounded-full'
                 register={register("allvotes", {
                   required: "السنه مطلوب!",
@@ -62,7 +62,7 @@ const AddCity = () => {
                 borderRadius="10px"
                           any='w-full'
               />
-                      <Link to='/places' className='w-full'>
+                      <Link to='/' className='w-full'>
                           <Button
                 color="white"
                 bgColor={"red"}
